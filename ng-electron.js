@@ -26,34 +26,35 @@ angular.module('ngElectron', [])
   o.require         = require('remote').require;
 
   //Electron api
-  o.app             = o.require('app');
-  o.browserWindow   = o.require('browserWindow');
-  o.clipboard       = o.require('clipboard');
-  o.dialog          = o.require('dialog');
-  o.menu            = o.require('menu');
-  o.menuItem        = o.require('menuItem');
-  o.nativeImage     = o.require('nativeImage');
-  o.powerMonitor    = o.require('powerMonitor');
-  o.protocol        = o.require('protocol');
-  o.screen          = o.require('screen');
-  o.shell           = o.require('shell');
-  o.tray            = o.require('tray');
+    o.app             = o.require('app');
+    o.browserWindow   = require('electron').remote.BrowserWindow;
 
-  //Node 11 (abridged) api
-  o.buffer          = o.require('buffer');
-  o.childProcess    = o.require('childProcess');
-  o.crypto          = o.require('crypto');
-  o.dns             = o.require('dns');
-  o.emitter         = o.require('events').EventEmitter;
-  o.fs              = o.require('fs');
-  o.http            = o.require('http');
-  o.https           = o.require('https');
-  o.net             = o.require('net');
-  o.os              = o.require('os');
-  o.path            = o.require('path');
-  o.querystring     = o.require('querystring');
-  o.url             = o.require('url');
-  o.zlib            = o.require('zlib');
+    o.clipboard       = o.require('clipboard');
+    o.dialog          = o.require('dialog');
+    o.menu            = require('electron').remote.Menu;
+    o.menuItem        = require('electron').remote.MenuItem;
+    o.nativeImage     = require('electron').remote.nativeImage;
+    o.powerMonitor    = require('electron').remote.powerMonitor;
+    o.protocol        = require('electron').remote.protocol;
+    o.screen          = require('electron').remote.screen;
+    o.shell           = require('electron').remote.shell;
+    o.tray            = o.require('tray');
+
+    //Node 11 (abridged) api
+    o.buffer          = o.require('buffer');
+    o.childProcess    = require('electron').remote.childProcess;
+    o.crypto          = o.require('crypto');
+    o.dns             = o.require('dns');
+    o.emitter         = o.require('events').EventEmitter;
+    o.fs              = o.require('fs');
+    o.http            = o.require('http');
+    o.https           = o.require('https');
+    o.net             = o.require('net');
+    o.os              = o.require('os');
+    o.path            = o.require('path');
+    o.querystring     = o.require('querystring');
+    o.url             = o.require('url');
+    o.zlib            = o.require('zlib');
 
   return o;
 }])
