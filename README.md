@@ -1,3 +1,5 @@
+Fork from https://github.com/develephant/ngElectron
+
 # ngElectron - AngularJS Electron Service
 
 > An __AngularJS__ service module making it easier to interface with __Electron__.
